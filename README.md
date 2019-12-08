@@ -1,3 +1,14 @@
+Getting Sarted
+
+Please run:
+
+sudo pip install -r requirements.txt
+
+then you can ru the flask application:
+
+flask run
+
+
 #Welcome to the Science of Space 101.
 
 The following document is a user's manual and an informative article about the website, how it works and what exactly it does. This website is made for amateur astronomers. Often when people engage in astronomy and for me, astrophotography, they have to figure where exactly the object or planet they want to look at is. There are trillions of stars in the night sky and parsing them is a uniquely difficult job. My goal with this project was to provide a mathematical and informative method of supporting the quest of fellow astronomers to find and locate objects in the night sky as well as provide a space for the user to upload their own astronomy pictures as well.
