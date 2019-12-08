@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portal
+{% endblock %}
+
+{% block main %}
+        <script>
+            let a = 0;
+            function rotation() {
+                if(a == 4) {
+                    a = a - 4;
+                }
+                let string = `/static/Images/plot${a}.png`;
+                document.getElementById("display").src= string;
+                a = a + 1;
+            }
+            window.setInterval(rotation, 900);
+        </script>
+        <form action="/portal" method="post">
+        <div class="form-group">
+            <table style="width:100%">
+            <h1> Query Results and Orbital Display </h1>
+
+                <div style="width: 380px; height: 420px; overflow: hidden; border: solid blue 4px" class = gif>
+                    <img id = "display" alt="my plot" width="450" height="500">
+                </div>
+
+                <h2> Timelapse Display of Object's Elevation </h2>
+
+                <div>
+                    <img src="static/Images/path.png" alt="my plot" width="450" height="500" class='gif'>
+                </div>
+
+                <div>
+
+                <h3 align='center'> Current Location</h3>
+
+                            <div align="center"> {{ geo }} </div>
+
+                </div>
+
+                <div>
+                    <h2>
+                        Understanding Your Results
+                    </h2>
+                    <p>
+                        The first diagram is linear transformation applied to
+                        right acession coordinates transformed from hh:mm::yy to
+                        degrees and then converted to cartesian coordinates using a
+                        equatorial polar transformation and then normalized to display
+                        the visible orbital trajectory of the astronomical object
+                        super-imposed on the the Earth's thermoshpere.
+
+                        The second diagram displays the rise of the object over the time period of one day
+                        and then the object's fall below the horizon.
+                    </p>
+                </div>
+
+                <div>
+                    <h3> Emphemeris Results </h3>
+                    {% for item in eph %}
+                        <p> {{ item }} </p>
+                    {% endfor %}
+                </div>
+
+
+        </div>
+        </form>
+{% endblock %}

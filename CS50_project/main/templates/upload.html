@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <form action="/upload" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="file" id="file" accept="image/gif, image/jpeg, image/png" placeholder="file" type="file">
+        </div>
+        <button class="btn btn-primary" align='center' type="submit">Upload</button>
+    </form>
+{% endblock %}

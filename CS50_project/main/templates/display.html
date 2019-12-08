@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Display
+{% endblock %}
+
+{% block main %}
+        <div>
+            {% for row in images %}
+                <tr>
+                    <td align='center'>{{ row['time'] }}</td>
+                    <img src="{{ url_for('static', filename='Images/uploads/' + row['symbol'])}}" alt="Pictures" class='gif'>
+                </tr>
+            {% endfor %}
+        </div>
+{% endblock %}

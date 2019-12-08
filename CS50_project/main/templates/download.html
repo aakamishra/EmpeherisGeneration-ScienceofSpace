@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Download
+{% endblock %}
+
+{% block main %}
+    <form action="/data" method="post">
+        <div align='center'>
+            <h2> Raw Data </h2>
+            <a href="/static/data.csv" download>Download Link</a>
+        </div>
+    </form>
+{% endblock %}

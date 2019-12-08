@@ -1,0 +1,51 @@
+body {
+  background-image: url('/static/Images/IMG_7172.JPG');
+  color: white;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-style: oblique;
+}
+h3 {
+  text-align:center;
+  font-style: inherit;
+}
+.gif {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+.form {
+  text-align: center;
+}
+#result {
+  text-align:center;
+}
+#subtitle {
+  text-align: center;
+  font-style: italic;
+}
+#disclaimer {
+  text-align: center;
+}
+.hidden{
+    display:none;
+}
+
+.visible{
+    display:block;
+}

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Welcome to Science of Space 101!</h1>
+
+        <p id="subtitle">This is my Astronomy site where I publish pictures of planets that I have taken
+        </p>
+
+        <p><img src="static/Images/ezgif.com-video-to-gif.gif" alt="Near Earth Asteroid" height="200" class='gif'>
+        This is a video I got of a near Earth asteroid that passed over Davis, California.
+        I mainly use my Newtonian Reflector to take pictures at night. A Newtonian reflector uses a
+        back mirror to reflect light into an eyepiece which futher magnifies the image.
+        These asteroids can be seen when there are minimal light sources in the area surrounding you.
+        You want to have a telescope that can actively track objects in the night sky. I would personally
+        recommend using JPL horizons for any pathfinding that you may need to do.
+        </p>
+        <h2> A little bit about myself ...</h2>
+        <p><img src="static/Images/AakashRobotics.PNG" alt="Aakash" height="200" class='gif'>
+        I have worked in the past with vision tracking using limelights on my robotics team as well as Open CV. Last summer,
+        I worked on studying asteroids at MIT by creating python programs that processed FITS files and other data from Palomar Observatory.
+        I was also able to publish this research. For the last two years, I have programmed for my robotics team in c++ and some Python as well.
+        I have experience with making my own star tracking programs which I created as a part of my project to make a computerized telescope.
+        </p>
+
+        <h3>Search here for cool news about astronomical objects</h3>
+
+        <div class="form">
+        <form action='https://www.earthsky.org/' method ='get'>
+            <input name="s" type="text">
+            <input type="submit" value="Submit Form">
+        </form>
+        </div>
+
+        <hr/>
+        <p id='disclaimer'> All Rights Reserved 2019 (esepecially for the pictures)</p>
+
+{% endblock %}
